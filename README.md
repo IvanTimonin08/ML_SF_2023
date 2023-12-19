@@ -67,7 +67,7 @@
 вы сможете быстро создавать и организовыватьзаметки, а также эффективно повторять
 и углублять свои знания.
 
-![UniHelperBot.py](https://github.com/santerr80/UniHelper/blob/main/UniHelperBot.py)
+![](https://github.com/santerr80/UniHelper/blob/main/UniHelperBot.py)
 
 ------
 На
