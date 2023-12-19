@@ -88,7 +88,8 @@ def get_text(message):
     markup.add(types.InlineKeyboardButton("Озвучить текст", callback_data="convert to voice"))
     bot.reply_to(message, 'Выберите действие', reply_markup=markup)
 
-bot.polling(none_stop=True) ```
+bot.polling(none_stop=True)
+ ```
 
 
 Мыуверены, что наше приложение значительно
