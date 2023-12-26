@@ -7,7 +7,7 @@ from typing import Optional
 app = FastAPI()
 
 @app.get("/predict_image_class")
-async def predict_image_class(image_url: 'http://images.cocodataset.org/val2017/000000039769.jpg'):
+async def predict_image_class(image_url=http://images.cocodataset.org/val2017/000000039769.jpg):
     # Загрузка изображения по предоставленному URL
     image = Image.open(requests.get(image_url, stream=True).raw)
 
