@@ -1,7 +1,7 @@
 import pytest
 import requests
 from fastapi.testclient import TestClient
-from FastapiTimonin import app
+from main import app
 
 client = TestClient(app)
 
@@ -11,7 +11,7 @@ def test_predict_image_class():
     files = {'image': ('test_image.jpg', image_data, 'image/jpeg')}
 
     # Отправка POST-запроса к эндпоинту /predict_image_class с использованием requests
-    response = requests.post("http://testserver/predict_image_class", files=files)
+    response = requests.post("http://127.0.0.1:8000/predict_image_class", files=files)
 
     # Проверка кода ответа
     assert response.status_code == 200
