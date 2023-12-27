@@ -1,8 +1,7 @@
-from transformers import ViTFeatureExtractor, ViTForImageClassification
-import requests
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, File
 from PIL import Image
 from io import BytesIO
+import requests
 
 app = FastAPI()
 
@@ -10,15 +9,15 @@ app = FastAPI()
 processor = ViTFeatureExtractor.from_pretrained('google/vit-base-patch16-224')
 model = ViTForImageClassification.from_pretrained('google/vit-base-patch16-224')
 
-@app.get("/predict_image_class")
-async def predict_image_class(image_url: str):
+@app.post("/predict_image_class")
+async def predict_image_class(image: UploadFile = File(...)):
     try:
-        # Загрузка изображения по предоставленному URL
-        response = requests.get(image_url)
-        image = Image.open(BytesIO(response.content))
+        # Чтение и обработка изображения
+        contents = await image.read()
+        img = Image.open(BytesIO(contents))
 
         # Обработка изображения и выполнение предсказаний
-        inputs = processor(images=image, return_tensors="pt")
+        inputs = processor(images=img, return_tensors="pt")
         outputs = model(**inputs)
         logits = outputs.logits
         # Модель предсказывает один из 1000 классов ImageNet
