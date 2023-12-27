@@ -8,7 +8,7 @@ client = TestClient(app)
 def test_predict_image_class():
     # Создание фиктивного файла изображения для теста
     image_data = b'\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x01\x00`\x00`\x00\x00\xff\xdb\x00C\x00\x08\x06\x06...'
-    files = {'image': ('test_image.jpg', image_data, 'image/jpeg')}
+    files = {'image': ('test_image.jpg', image_data, 'images.jpeg')}
 
     # Отправка POST-запроса к эндпоинту /predict_image_class с использованием requests
     response = requests.post("http://127.0.0.1:8000/predict_image_class", files=files)
