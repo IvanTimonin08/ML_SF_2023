@@ -1,3 +1,4 @@
+from transformers import ViTFeatureExtractor, ViTForImageClassification
 from fastapi import FastAPI, UploadFile, File
 from PIL import Image
 from io import BytesIO
