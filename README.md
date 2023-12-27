@@ -14,7 +14,7 @@ widget:
 - src: https://huggingface.co/datasets/mishig/sample_images/resolve/main/palace.jpg
   example_title: Palace
 ---
-
+[![Tests](https://github.com/IvanTimonin08/ML_SF_2023/blob/main/.github/workflows/python-app.yml/badge.svg)](https://github.com/IvanTimonin08/ML_SF_2023/blob/main/.github/workflows/python-app.yml)
 # Vision Transformer (base-sized model) 
 http://127.0.0.1:8000/predict_image_class?image_url=http://images.cocodataset.org/val2017/000000039769.jpg
 Vision Transformer (ViT) model pre-trained on ImageNet-21k (14 million images, 21,843 classes) at resolution 224x224, and fine-tuned on ImageNet 2012 (1 million images, 1,000 classes) at resolution 224x224. It was introduced in the paper [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929) by Dosovitskiy et al. and first released in [this repository](https://github.com/google-research/vision_transformer). However, the weights were converted from the [timm repository](https://github.com/rwightman/pytorch-image-models) by Ross Wightman, who already converted the weights from JAX to PyTorch. Credits go to him. 
@@ -23,11 +23,9 @@ Disclaimer: The team releasing ViT did not write a model card for this model so 
 
 ## Model description
 
-The Vision Transformer (ViT) is a transformer encoder model (BERT-like) pretrained on a large collection of images in a supervised fashion, namely ImageNet-21k, at a resolution of 224x224 pixels. Next, the model was fine-tuned on ImageNet (also referred to as ILSVRC2012), a dataset comprising 1 million images and 1,000 classes, also at resolution 224x224.
+The Vision Transformer (ViT) - это модель кодировщика трансформера (похожая на BERT), предварительно обученная на большой коллекции изображений в надзорной манере, а именно на ImageNet-21k, с разрешением 224x224 пикселя. Затем модель была дообучена на ImageNet (также известном как ILSVRC2012), наборе данных, включающем 1 миллион изображений и 1000 классов, также с разрешением 224x224.
 
-Images are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds a [CLS] token to the beginning of a sequence to use it for classification tasks. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder.
-
-By pre-training the model, it learns an inner representation of images that can then be used to extract features useful for downstream tasks: if you have a dataset of labeled images for instance, you can train a standard classifier by placing a linear layer on top of the pre-trained encoder. One typically places a linear layer on top of the [CLS] token, as the last hidden state of this token can be seen as a representation of an entire image.
+Путем предварительного обучения модель изучает внутреннее представление изображений, которое затем можно использовать для извлечения признаков, полезных для последующих задач: если у вас, например, есть набор данных с размеченными изображениями, вы можете обучить стандартный классификатор, разместив линейный слой поверх предварительно обученного кодировщика. Обычно линейный слой размещают поверх токена [CLS], так как последнее скрытое состояние этого токена можно рассматривать как представление всего изображения.
 
 ## Intended uses & limitations
 
