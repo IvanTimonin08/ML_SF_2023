@@ -1,5 +1,5 @@
 import pytest
-import httpx
+import requests
 from fastapi.testclient import TestClient
 from main import app
 
@@ -10,8 +10,8 @@ def test_predict_image_class():
     image_data = b'\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x01\x00`\x00`\x00\x00\xff\xdb\x00C\x00\x08\x06\x06...'
     files = {'image': ('test_image.jpg', image_data, 'image/jpeg')}
 
-    # Отправка POST-запроса к эндпоинту /predict_image_class
-    response = client.post("/predict_image_class", files=files)
+    # Отправка POST-запроса к эндпоинту /predict_image_class с использованием requests
+    response = requests.post("http://testserver/predict_image_class", files=files)
 
     # Проверка кода ответа
     assert response.status_code == 200
