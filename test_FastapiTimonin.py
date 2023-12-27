@@ -1,7 +1,7 @@
 import pytest
 import requests
 from fastapi.testclient import TestClient
-from FastapiTimonin import app
+from api import app
 
 client = TestClient(app)
 
