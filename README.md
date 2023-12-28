@@ -14,7 +14,7 @@ widget:
 - src: https://huggingface.co/datasets/mishig/sample_images/resolve/main/palace.jpg
   example_title: Palace
 ---
-[![Tests](https://github.com/IvanTimonin08/ML_SF_2023/blob/main/.github/workflows/python-app.yml/badge.svg)](https://github.com/IvanTimonin08/ML_SF_2023/blob/main/.github/workflows/python-app.yml)
+[![Tests](https://github.com/IvanTimonin08/ML_SF_2023/actions/workflows/python-app.yml)/badge.svg)](https://github.com/IvanTimonin08/ML_SF_2023/actions/workflows/python-app.yml))
 # Vision Transformer (base-sized model) 
 http://127.0.0.1:8000/predict_image_class?image_url=http://images.cocodataset.org/val2017/000000039769.jpg
 Vision Transformer (ViT) model pre-trained on ImageNet-21k (14 million images, 21,843 classes) at resolution 224x224, and fine-tuned on ImageNet 2012 (1 million images, 1,000 classes) at resolution 224x224. It was introduced in the paper [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929) by Dosovitskiy et al. and first released in [this repository](https://github.com/google-research/vision_transformer). However, the weights were converted from the [timm repository](https://github.com/rwightman/pytorch-image-models) by Ross Wightman, who already converted the weights from JAX to PyTorch. Credits go to him. 
