@@ -21,7 +21,7 @@ Vision Transformer (ViT) model pre-trained on ImageNet-21k (14 million images, 2
 
 Disclaimer: The team releasing ViT did not write a model card for this model so this model card has been written by the Hugging Face team.
 
-## Model description
+## Описание модели
 
 The Vision Transformer (ViT) - это модель кодировщика трансформера (похожая на BERT), предварительно обученная на большой коллекции изображений в надзорной манере, а именно на ImageNet-21k, с разрешением 224x224 пикселя. Затем модель была дообучена на ImageNet (также известном как ILSVRC2012), наборе данных, включающем 1 миллион изображений и 1000 классов, также с разрешением 224x224.
 
