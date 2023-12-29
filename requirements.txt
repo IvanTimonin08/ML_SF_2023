@@ -1,5 +1,6 @@
-transformers
+streamlit==0.88.0
+transformers==4.12.0
+Pillow==8.3.2
 requests
 fastapi
-Pillow
 torch
