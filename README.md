@@ -29,11 +29,11 @@ ViT - это модель кодировщика трансформера, пр�
 
 ### Как использовать
 **Установка:**
-git clone [ttps://github.com/username/repository.git](https://github.com/IvanTimonin08/ML_SF_2023)
-cd ML_SF_2023
-pip install -r requirements.txt
+- git clone [ttps://github.com/username/repository.git](https://github.com/IvanTimonin08/ML_SF_2023)
+- cd ML_SF_2023
+- pip install -r requirements.txt
 **Запуск:**
-streamlit run timonin2.py
+- streamlit run timonin2.py
 
 Для классификации изображения из набора данных COCO 2017 на один из 1000 классов ImageNet вы можете использовать следующий код:
 
