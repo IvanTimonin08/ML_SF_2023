@@ -32,6 +32,7 @@ ViT - это модель кодировщика трансформера, пр�
 - git clone [ttps://github.com/username/repository.git](https://github.com/IvanTimonin08/ML_SF_2023)
 - cd ML_SF_2023
 - pip install -r requirements.txt
+
 **Запуск:**
 - streamlit run timonin2.py
 
