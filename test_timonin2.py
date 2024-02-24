@@ -15,8 +15,8 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)
 
     # Load the processor and model
-    processor = ViTImageProcessor.from_pretrained('google/vit-base-patch16-224')
-    model = ViTForImageClassification.from_pretrained('google/vit-base-patch16-224')
+    # processor = ViTImageProcessor.from_pretrained('google/vit-base-patch16-224')
+    # model = ViTForImageClassification.from_pretrained('google/vit-base-patch16-224')
 
     # Process the image and make predictions
     inputs = processor(images=image, return_tensors="pt")
