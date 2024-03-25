@@ -1,8 +1,6 @@
 import streamlit as st
 from transformers import ViTImageProcessor, ViTForImageClassification
 from PIL import Image
-import requests
-import io
 
 st.title("Image Classification with ViT")
 
@@ -30,4 +28,3 @@ if uploaded_file is not None:
     st.write("Predicted class:", predicted_class)
 else:
     st.write("Please upload an image.")
-
